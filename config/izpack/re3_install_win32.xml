@@ -24,15 +24,15 @@
 	<resources>
 		<res id="InfoPanel.info" src="config/izpack/Readme.txt" />
 		<res src="config/izpack/default_shortcut_specification.xml" id="shortcutSpec.xml" />
-		<res src="config/izpack/userInputSpec.xml" id="userInputSpec.xml" />		
-  		<res id="userInputLang.xml_eng" src="config/izpack/userInputLang.xml_eng" />
-  	</resources>
+		<res src="config/izpack/userInputSpec.xml" id="userInputSpec.xml" />
+		<res id="userInputLang.xml_eng" src="config/izpack/userInputLang.xml_eng" />
+	</resources>
 	<panels>
 		<panel classname="HelloPanel" />
 		<panel classname="InfoPanel" />
 		<panel classname="TargetPanel" />
-		<panel classname="UserInputPanel" id="UserInputPanel.0"/>
-		<panel classname="UserInputPanel" id="UserInputPanel.1"/>
+		<panel classname="UserInputPanel" id="UserInputPanel.0" />
+		<panel classname="UserInputPanel" id="UserInputPanel.1" />
 		<panel classname="InstallPanel" />
 		<panel classname="ShortcutPanel" />
 		<panel classname="FinishPanel" />
@@ -41,46 +41,36 @@
 		<pack name="Base" required="yes">
 			<description>The base files</description>
 
-			<file src="re3.properties"
-				targetdir="$INSTALL_PATH" />
-			<file src="settings.xml"
-				targetdir="$INSTALL_PATH" />
-			<file src="re3.css"
-				targetdir="$INSTALL_PATH" />
+			<file src="re3.properties" targetdir="$INSTALL_PATH" />
+			<file src="settings.xml" targetdir="$INSTALL_PATH" />
+			<file src="re3.css" targetdir="$INSTALL_PATH" />
 			<file src="config/izpack/install files/windows/log4j.properties"
 				targetdir="$INSTALL_PATH" />
-			<file src="config/izpack/install files/client.policy"
-				targetdir="$INSTALL_PATH" />
+			<file src="config/izpack/install files/client.policy" targetdir="$INSTALL_PATH" />
 
-			<file src="images/splashscreen.gif"
-				targetdir="$INSTALL_PATH/images" />
-			<file src="images/noalbumcover.gif"
-				targetdir="$INSTALL_PATH/images" />
+			<file src="images/splashscreen.gif" targetdir="$INSTALL_PATH/images" />
+			<file src="images/noalbumcover.gif" targetdir="$INSTALL_PATH/images" />
 
-			<fileset dir=""
-				targetdir="$INSTALL_PATH">
-				<include name="icons/**/*"/>				
-				<include name="lib/**/*"/>
-				<include name="web/**/*"/>
-				<exclude name="**/.svn"/>					
-				<exclude name="**/.svn/**"/>					
-				<exclude name="lib/qt/**"/>					
+			<fileset dir="" targetdir="$INSTALL_PATH">
+				<include name="icons/**/*" />
+				<include name="lib/**/*" />
+				<include name="web/**/*" />
+				<exclude name="**/.svn" />
+				<exclude name="**/.svn/**" />
+				<exclude name="lib/qt/**" />
 			</fileset>
-				
-			<file os="windows" src="lib/qt/qtjambi-4.5.2_01.jar"
-				targetdir="$INSTALL_PATH/lib/qt" />
+
+			<file os="windows" src="lib/qt/qtjambi-4.5.2_01.jar" targetdir="$INSTALL_PATH/lib/qt" />
 			<file os="windows" src="lib/qt/win32/qtjambi-win32-msvc2005-4.5.2_01.jar"
 				targetdir="$INSTALL_PATH/lib/qt/win32" />
 			<file os="windows" src="lib/qt/win64/qtjambi-win64-msvc2005x64-4.5.2_01.jar"
 				targetdir="$INSTALL_PATH/lib/qt/win64" />
-								
-			<file src="bundles/translations.properties"
-				targetdir="$INSTALL_PATH/bundles" />
 
-			<file os="windows" src="@@@RE3_DEPLOY_JAR@@@"
-				targetdir="$INSTALL_PATH" />
-			<file os="windows" src="config/izpack/install files/windows/win32/re3.bat" override="true"
-				targetdir="$INSTALL_PATH" />
+			<file src="bundles/translations.properties" targetdir="$INSTALL_PATH/bundles" />
+
+			<file os="windows" src="@@@RE3_DEPLOY_JAR@@@" targetdir="$INSTALL_PATH" />
+			<file os="windows" src="config/izpack/install files/windows/win32/re3.bat"
+				override="true" targetdir="$INSTALL_PATH" />
 			<file os="windows" src="config/izpack/install files/windows/startRE3.jar"
 				targetdir="$INSTALL_PATH" />
 			<file os="windows" src="config/izpack/install files/windows/faad.exe"
@@ -88,13 +78,10 @@
 			<file os="windows" src="config/izpack/install files/windows/ffmpeg.exe"
 				targetdir="$INSTALL_PATH" />
 
-			<file os="windows" src="icons/re3.ico"
-				targetdir="$INSTALL_PATH/icons"/>
-				
-			<parsable targetfile="$INSTALL_PATH/re3.properties"
-				type="shell" />
-			<parsable targetfile="$INSTALL_PATH/log4j.properties"
-				type="shell" />
+			<file os="windows" src="icons/re3.ico" targetdir="$INSTALL_PATH/icons" />
+
+			<parsable targetfile="$INSTALL_PATH/re3.properties" type="shell" />
+			<parsable targetfile="$INSTALL_PATH/log4j.properties" type="shell" />
 			<parsable os="windows" targetfile="$INSTALL_PATH/re3.bat"
 				type="shell" />
 
@@ -104,9 +91,9 @@
 				stage="never" />
 			<executable os="windows" targetfile="$INSTALL_PATH/ffmpeg.exe"
 				stage="never" />
-				
+
 		</pack>
 	</packs>
 	<native type="izpack" name="ShellLink.dll" />
-	<native type="izpack" name="ShellLink_x64.dll"/>
+	<native type="izpack" name="ShellLink_x64.dll" />
 </installation>
