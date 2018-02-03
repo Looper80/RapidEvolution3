@@ -152,7 +152,7 @@
 		<mkdir dir="${BUILD_DIR}" /> <!-- Create the BUILD_DIR directory structure used by compile -->
 		<javac sourcepath="" srcdir="${SRC_DIR};${JUIC_DIR}" destdir="${BUILD_DIR}"
 			classpathref="project.classpath" fork="yes" executable="${COMPILER}"
-			debug="true" target="1.9" debuglevel="lines,source" />
+			debug="true" target="1.6" debuglevel="lines,source" />
 	</target>
 
 	<target name="clean" depends="init" description="clean up">

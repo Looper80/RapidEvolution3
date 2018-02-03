@@ -34,7 +34,7 @@ public class OSHelper {
     	if (dataDirectory == null)
     		return getWorkingDirectory("Rapid Evolution 3 Unit");
     	if (dataDirectory.equalsIgnoreCase("%{RE3_LIBRARY_PATH}")) // dev mode
-    		return new File("i:/re3library");
+    		return new File("C:/Users/Steve/Rapid Evolution 3");
     	dataDirectory = FileUtil.unify(dataDirectory);
     	if (dataDirectory.endsWith("/"))
     		dataDirectory = dataDirectory.substring(0, dataDirectory.length() - 1);
