@@ -81,6 +81,7 @@
 			<fileset dir="${LIB_DIR}">
 				<include name="**/*.jar" />
 				<include name="**/*.zip" />
+			    <include name="**.jar" />
 			</fileset>
 		</path>
 	</target>
